@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     width: 23,
     height: 31,
   },
-  health: {
+  like: {
     width: 28,
     height: 26,
   },
