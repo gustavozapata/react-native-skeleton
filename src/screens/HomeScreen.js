@@ -63,6 +63,20 @@ const HomeScreen = ({navigation}) => {
                 <Text style={styles.highlight}>section description</Text>
               </Text>
             </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Home Section</Text>
+              <Text style={styles.sectionDescription}>
+                This is a{' '}
+                <Text style={styles.highlight}>section description</Text>
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Home Section</Text>
+              <Text style={styles.sectionDescription}>
+                This is a{' '}
+                <Text style={styles.highlight}>section description</Text>
+              </Text>
+            </View>
           </View>
         </ScrollView>
         <Navigation navigation={navigation} active="home" />
@@ -74,6 +88,7 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
+    backgroundColor: '#F9F9F9',
   },
   body: {
     backgroundColor: 'white',

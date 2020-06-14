@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   home: {
-    width: 23,
-    height: 31,
+    width: 26,
+    height: 27,
   },
   like: {
     width: 28,

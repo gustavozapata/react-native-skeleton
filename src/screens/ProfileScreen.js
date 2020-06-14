@@ -40,7 +40,7 @@ const ProfileScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F9F9F9',
   },
   body: {
     backgroundColor: 'white',
