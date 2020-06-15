@@ -7,7 +7,6 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import Navigation from '../layout/Navigation';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -24,7 +23,11 @@ const HomeScreen = ({navigation}) => {
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Home Section</Text>
+              <Text
+                style={styles.sectionTitle}
+                onPress={() => navigation.navigate('Settings')}>
+                Settings Screen
+              </Text>
               <Text style={styles.sectionDescription}>
                 Read the docs to discover what to do next
               </Text>
@@ -79,7 +82,7 @@ const HomeScreen = ({navigation}) => {
             </View>
           </View>
         </ScrollView>
-        <Navigation navigation={navigation} active="home" />
+        {/* <Navigation navigation={navigation} active="home" /> */}
       </SafeAreaView>
     </>
   );

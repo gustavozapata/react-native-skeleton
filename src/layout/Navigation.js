@@ -23,7 +23,7 @@ export default function Navigation({navigation, active}) {
 
 const styles = StyleSheet.create({
   navigationBar: {
-    height: 83,
+    height: 63,
     backgroundColor: '#F9F9F9',
     borderTopWidth: 1,
     borderTopColor: '#ddd',

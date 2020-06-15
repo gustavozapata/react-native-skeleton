@@ -7,7 +7,6 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import Navigation from '../layout/Navigation';
 
 const ProfileScreen = ({navigation}) => {
   return (
@@ -31,7 +30,6 @@ const ProfileScreen = ({navigation}) => {
             </View>
           </View>
         </ScrollView>
-        <Navigation navigation={navigation} active="profile" />
       </SafeAreaView>
     </>
   );

@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-const LikeScreen = ({navigation}) => {
+const SettingsScreen = ({navigation}) => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -16,7 +16,11 @@ const LikeScreen = ({navigation}) => {
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Like</Text>
+              <Text
+                style={styles.sectionTitle}
+                onPress={() => navigation.navigate('Home')}>
+                Home Screen
+              </Text>
               <Text style={styles.sectionDescription}>
                 This is a{' '}
                 <Text style={styles.highlight}>section description</Text>
@@ -30,6 +34,7 @@ const LikeScreen = ({navigation}) => {
             </View>
           </View>
         </ScrollView>
+        {/* <Navigation navigation={navigation} active="like" /> */}
       </SafeAreaView>
     </>
   );
@@ -63,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LikeScreen;
+export default SettingsScreen;
