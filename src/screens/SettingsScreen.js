@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-const SettingsScreen = ({navigation}) => {
+const SettingsScreen = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -16,25 +16,14 @@ const SettingsScreen = ({navigation}) => {
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text
-                style={styles.sectionTitle}
-                onPress={() => navigation.navigate('Home')}>
-                Home Screen
-              </Text>
+              <Text style={styles.sectionTitle}>Settings</Text>
               <Text style={styles.sectionDescription}>
                 This is a{' '}
                 <Text style={styles.highlight}>section description</Text>
               </Text>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Like</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next
-              </Text>
-            </View>
           </View>
         </ScrollView>
-        {/* <Navigation navigation={navigation} active="like" /> */}
       </SafeAreaView>
     </>
   );
@@ -43,18 +32,17 @@ const SettingsScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
-    backgroundColor: '#F9F9F9',
+    backgroundColor: '#fff',
   },
   body: {
     backgroundColor: 'white',
   },
   sectionContainer: {
-    marginTop: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+    fontSize: 33,
+    fontWeight: '800',
     color: 'black',
   },
   sectionDescription: {

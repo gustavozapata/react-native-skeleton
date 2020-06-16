@@ -7,7 +7,15 @@ const HomeStack = createStackNavigator();
 
 const HomeStackScreen = () => {
   return (
-    <HomeStack.Navigator>
+    <HomeStack.Navigator
+      screenOptions={{
+        title: '',
+        // headerLeft:
+        headerStyle: {
+          elevation: 0,
+          // borderBottomWidth: 0,
+        },
+      }}>
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen name="Settings" component={SettingsScreen} />
     </HomeStack.Navigator>

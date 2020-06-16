@@ -12,32 +12,22 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-const HomeScreen = () => {
+const FavoritesScreen = () => {
   return (
     <Stack.Navigator
       screenOptions={{
         title: '',
-        // headerLeft: props => <BackButton {...props} />,
+        // headerLeft:
         headerStyle: {
           elevation: 0,
           // borderBottomWidth: 0,
         },
       }}>
       <Stack.Screen name="Home" component={MainScreen} />
-      <Stack.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={
-          {
-            // headerTitle: props => <BackButton {...props} />,
-          }
-        }
-      />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 };
-
-const BackButton = () => <Text>&lt; vamos uedddhh</Text>;
 
 const MainScreen = ({navigation}) => {
   return (
@@ -47,11 +37,11 @@ const MainScreen = ({navigation}) => {
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Home</Text>
+              <Text style={styles.sectionTitle}>Favorites</Text>
               <Text
                 style={styles.sectionDescription}
                 onPress={() => navigation.navigate('Settings')}>
-                Go to page
+                Go to settings
               </Text>
             </View>
           </View>
@@ -86,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default FavoritesScreen;

@@ -7,25 +7,41 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import SettingsScreen from './SettingsScreen';
+import {createStackNavigator} from '@react-navigation/stack';
 
-const ProfileScreen = ({navigation}) => {
+const Stack = createStackNavigator();
+
+const ProfileScreen = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        title: '',
+        // headerLeft:
+        headerStyle: {
+          elevation: 0,
+          // borderBottomWidth: 0,
+        },
+      }}>
+      <Stack.Screen name="Home" component={MainScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const MainScreen = ({navigation}) => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       <SafeAreaView style={styles.topContainer}>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Profile</Text>
-              <Text style={styles.sectionDescription}>
-                This is a{' '}
-                <Text style={styles.highlight}>section description</Text>
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Profile</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next
+              <Text
+                style={styles.sectionDescription}
+                onPress={() => navigation.navigate('Settings')}>
+                Ir a ajustes
               </Text>
             </View>
           </View>
@@ -38,18 +54,14 @@ const ProfileScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
-    backgroundColor: '#F9F9F9',
-  },
-  body: {
-    backgroundColor: 'white',
+    backgroundColor: '#fff',
   },
   sectionContainer: {
-    marginTop: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+    fontSize: 33,
+    fontWeight: '800',
     color: 'black',
   },
   sectionDescription: {
@@ -57,6 +69,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
     color: 'green',
+    textDecorationLine: 'underline',
   },
   highlight: {
     fontWeight: '700',
