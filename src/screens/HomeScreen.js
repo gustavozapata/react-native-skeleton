@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import SettingsScreen from './SettingsScreen';
 import {createStackNavigator} from '@react-navigation/stack';
+import rootStyles from '../styles/rootStyles';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ const HomeScreen = () => {
       screenOptions={{
         title: '',
         // headerLeft: props => <BackButton {...props} />,
+        headerTintColor: rootStyles.skeletonBlue,
         headerStyle: {
           elevation: 0,
           // borderBottomWidth: 0,
@@ -37,7 +39,7 @@ const HomeScreen = () => {
   );
 };
 
-const BackButton = () => <Text>&lt; vamos uedddhh</Text>;
+const BackButton = () => <Text>&lt; vamos</Text>;
 
 const MainScreen = ({navigation}) => {
   return (
